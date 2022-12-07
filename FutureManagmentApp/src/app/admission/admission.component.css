@@ -1,0 +1,26 @@
+.card-header {
+    background-color: rgb(57, 227, 148);
+}
+
+.card-body {
+    background-color: rgb(140, 235, 190);
+}
+
+
+.card {
+    background-color: rgb(188, 156, 217);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* for border color */
+    border: 3px solid rgb(54, 234, 129);
+    /* for height and width */
+    height: auto;
+    width: auto;
+    /* for center */
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+
+}
