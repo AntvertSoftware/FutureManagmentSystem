@@ -6,14 +6,17 @@ import { AdmissionComponent } from './admission.component';
 import { LeadComponent } from './components/lead/lead.component';
 
 
+
 @NgModule({
   declarations: [
     AdmissionComponent,
-    LeadComponent
+    LeadComponent,
+    
   ],
   imports: [
     CommonModule,
-    AdmissionRoutingModule
+    AdmissionRoutingModule,
+    
   ]
 })
 export class AdmissionModule { }
