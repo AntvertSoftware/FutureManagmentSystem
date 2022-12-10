@@ -4,8 +4,8 @@ import { AdmissionComponent } from './admission.component';
 
 import { LeadComponent } from './components/lead/lead.component';
 
-const routes: Routes = [{ path: '', component: AdmissionComponent },
-{ path: "lead", component: LeadComponent }];
+const routes: Routes = [{ path: "admission", component: AdmissionComponent },
+{ path: "", component: LeadComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
