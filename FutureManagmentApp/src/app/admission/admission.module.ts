@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { AdmissionRoutingModule } from './admission-routing.module';
 import { AdmissionComponent } from './admission.component';
 import { LeadComponent } from './components/lead/lead.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdimissionDetailsComponent } from './components/adimission-details/adimission-details.component';
 
 
 
