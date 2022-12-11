@@ -7,6 +7,7 @@ import { LeadComponent } from './components/lead/lead.component';
 <<<<<<< HEAD
 import { LeadDetailsComponent } from './components/lead-details/lead-details.component';
 =======
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdimissionDetailsComponent } from './components/adimission-details/adimission-details.component';
 >>>>>>> 2a26e3b61aabd1d745a6e7be3f59b35a859e1e15
 
@@ -26,6 +27,8 @@ import { AdimissionDetailsComponent } from './components/adimission-details/adim
   imports: [
     CommonModule,
     AdmissionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ]
 })
