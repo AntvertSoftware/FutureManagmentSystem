@@ -6,7 +6,7 @@ import { AdimissionDetailsComponent } from './components/adimission-details/adim
 
 import { LeadComponent } from './components/lead/lead.component';
 
-const routes: Routes = [{ path: "admission", component: AdmissionComponent },
+const routes: Routes = [{ path: "", component: AdmissionComponent },
 {path:"lead-details", component:LeadDetailsComponent},
 { path: "lead", component: LeadComponent },
 {path :"admission-details",component:AdimissionDetailsComponent}];
