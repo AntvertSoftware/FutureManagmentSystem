@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdmissionRoutingModule } from './admission-routing.module';
 import { AdmissionComponent } from './admission.component';
 import { LeadComponent } from './components/lead/lead.component';
+import { LeadDetailsComponent } from './components/lead-details/lead-details.component';
 
 
 
@@ -11,6 +12,7 @@ import { LeadComponent } from './components/lead/lead.component';
   declarations: [
     AdmissionComponent,
     LeadComponent,
+    LeadDetailsComponent,
     
   ],
   imports: [
