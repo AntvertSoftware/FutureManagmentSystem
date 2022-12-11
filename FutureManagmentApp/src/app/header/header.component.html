@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark  " style="background-color: #1B5B2D;">
+<nav class="navbar navbar-expand-sm navbar-dark  " style="background-color: #0557fa;">
   <div class="container">
     <a href="" class="navbar-brand h1">
       <img class="d-inline-block align-top"
@@ -25,7 +25,8 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" [routerLink]="['admission']">Admission</a></li>
+            <li><a class="dropdown-item" [routerLink]="['admission/lead']">Lead</a></li>
           </ul>
         </li>
 
@@ -33,7 +34,7 @@
     </div>
     <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-primary" type="submit">Search</button>
+      <button class="btn btn-success" type="submit">Search</button>
     </form>
   </div>
 </nav>
