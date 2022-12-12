@@ -13,37 +13,36 @@ export class LeadComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.registrationForm();
+    this.load();
+    this.onSave();
   }
 
-  registrationForm(){
+  load(){
    this. formRegister = new FormGroup({
       firstname: new FormControl("", [Validators.required]),
       lastname: new FormControl("", [Validators.required]),
       fathername: new FormControl("", [Validators.required]),
-      mothername: new FormControl(""),
+      mothername: new FormControl("",[Validators.required]),
       gender: new FormControl(""),
       email: new FormControl(""),
-      mobileno: new FormControl(""),
+      mobileno: new FormControl("",[Validators.required]),
       dob: new FormControl(""),
       class: new FormControl(""),
       address: new FormControl(""),
       city: new FormControl(""),
       state: new FormControl(""),
-      gip: new FormControl(""),
+      zip: new FormControl(""),
     });
   }
 
+
+  onSave(){
+    console.log(this.formRegister.value);
+  }
   get f()
   {
     return this.formRegister.controls;
   }
 
-  get firstname() { return this.formRegister.get('firstname'); }
-
-    
   
- 
-
-
 }
