@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-adimission-details',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adimission-details.component.css']
 })
 export class AdimissionDetailsComponent implements OnInit {
+formfeesdetails!:FormGroup;
 
   constructor() { }
 
