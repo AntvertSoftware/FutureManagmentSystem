@@ -1,28 +1,40 @@
  <div class="cent">
     <div class="card">
-        <div style="font-size:20px  ; background-color: aqua; text-align: center;color: rgb(3, 3, 61);" class="card-header">
-            LEADFORM
+        <div style="font-size:20px  ; background-color: rgb(205, 205, 205); text-align: center;color: rgb(3, 3, 61);" class="card-header">
+            Lead Form
         </div>
-        <form class="row g-3">
+        <form class="row g-3"[formGroup]="formRegister" (ngSubmit)="load()">
             <div class="col-md-6">
-                <label for="inputFirstName" class="form-label">FirstName</label>
-                <input type="text" class="form-control" id="inputEmail4" formControlName="FirstName"
-                    placeholder="FirstName">
+                <label for="inputFirstName" class="form-label">FirstName  <span style="color: rgb(151, 11, 11);">*</span></label>
+                <input type="text" class="form-control" id="inputEmail4" formControlName="firstname" placeholder="FirstName">
+                    <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['firstname'].errors && f['firstname'].errors['required']">First Name
+                          Required</div>
+                      </div>
             </div>
             <div class="col-md-6">
-                <label for="inputLastName" class="form-label">LastName</label>
-                <input type="text" class="form-control" id="inputEmail4" formControlName="LastName"
-                    placeholder="LastName">
+                <label for="inputLastName" class="form-label">LastName <span style="color: rgb(151, 11, 11);">*</span></label>
+                <input type="text" class="form-control" id="inputEmail4" formControlName="lastname" placeholder="LastName">
+                <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">Last Name
+                      Required</div>
+                  </div>
             </div>
             <div class="col-md-6">
-                <label for="inputFatherName" class="form-label">FatherName</label>
-                <input type="text" class="form-control" id="inputEmail4" formControlName="FatherName"
-                    placeholder="FatherName">
+                <label for="inputFatherName" class="form-label">FatherName <span style="color: rgb(151, 11, 11);">*</span></label>
+                <input type="text" class="form-control" id="inputEmail4" formControlName="fathername" placeholder="FatherName">
+                <div *ngIf="f['fathername'].touched && f['fathername'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['fathername'].errors && f['fathername'].errors['required']">Father Name
+                      Required</div>
+                  </div>
             </div>
             <div class="col-md-6">
-                <label for="inputMotherName" class="form-label">MotherName</label>
-                <input type="text" class="form-control" id="inputEmail4" formControlName="MotherName"
-                    placeholder="MotherName">
+                <label for="inputMotherName" class="form-label">MotherName<span style="color: rgb(151, 11, 11);">*</span></label>
+                <input type="text" class="form-control" id="inputEmail4" formControlName="mothername"placeholder="MotherName">
+                <div *ngIf="f['mothername'].touched && f['mothername'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['mothername'].errors && f['mothername'].errors['required']">Mother name
+                      Required</div>
+                  </div>
             </div>
 
             <div class="col-md-6">
@@ -39,16 +51,17 @@
             </div>
 
             <div class="col-md-6">
-                <label for="inputMobileNo" class="form-label">MobileNo</label>
-                <input type="text" class="form-control" id="inputEmail4" formControlName="MobileNo"
-                    placeholder="MobileNo">
+                <label for="inputMobileNo" class="form-label">Mobile No. <span style="color: rgb(151, 11, 11);">*</span></label>
+                <input type="text" class="form-control" id="inputEmail4" formControlName="mobileno"placeholder="MobileNo">
             </div>
-
-            <div class="col-md-6">
-                <label for="inputDob" class="form-label">Dob</label>
-                <input type="text" class="form-control" id="inputEmail4" formControlName="Dob" placeholder="Dob">
-            </div>
-
+            <div *ngIf="f['mobileno'].touched && f['mobileno'].invalid" class="alert alert-danger">
+                <div *ngIf="f['mobileno'].errors && f['mobileno'].errors['required']">Mobile No.
+                  Required</div>
+              </div>
+            <div class="form-group col-6">
+                <label>Date of birth</label>
+                <input type="date" class="form-control" formControlName="dob" placeholder="Dob">
+              </div>
             <div class="col-md-6">
                 <label for="inputClass" class="form-label">Class</label>
                 <select id="inputClass" class="form-select">
