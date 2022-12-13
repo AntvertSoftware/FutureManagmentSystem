@@ -5,11 +5,13 @@ import { LeadDetailsComponent } from './components/lead-details/lead-details.com
 import { AdimissionDetailsComponent } from './components/adimission-details/adimission-details.component';
 
 import { LeadComponent } from './components/lead/lead.component';
+import { HomecomponentComponent } from '../homecomponent/homecomponent.component';
 
-const routes: Routes = [{ path: "", component: AdmissionComponent },
-{path:"lead-details", component:LeadDetailsComponent},
-{ path: "", component: LeadComponent },
-{path :"admission-details",component:AdimissionDetailsComponent}];
+const routes: Routes = [{ path: "admission", component: AdmissionComponent },
+{ path: "lead-details", component: LeadDetailsComponent },
+{ path: "lead", component: LeadComponent },
+{path: "", component: HomecomponentComponent},
+{ path: "admission-details", component: AdimissionDetailsComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
