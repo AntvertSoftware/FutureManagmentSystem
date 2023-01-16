@@ -5,10 +5,11 @@
     
 
 }
-.card{
-    margin-top: 50px;
+.card{    
+    margin-top: 90px;
     margin-bottom: 100px;
     margin-right: 80px;
     margin-left: 60px;
-    border: 2px solid rgb(103, 167, 204);
+    border: 3px solid rgb(103, 167, 204);
+    
   }

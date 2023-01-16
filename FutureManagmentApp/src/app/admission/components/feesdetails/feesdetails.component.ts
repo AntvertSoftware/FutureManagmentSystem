@@ -14,25 +14,32 @@ feesDetailsForm!:FormGroup;
   ngOnInit(): void {
     
     this.feesDetailsForms();
-    this.onSave();
+    this. load()
   }
   feesDetailsForms() {
     this.feesDetailsForm=new FormGroup({
-      RegistrationNumber: new FormControl("",[Validators.required]),
-      FullName: new FormControl([ "",Validators.required]),
-      Course: new FormControl(["",Validators.required]),
-      TotalFess: new FormControl(["",Validators.required]),
-      Discount: new FormControl(["",Validators.required]),
-      Paid: new FormControl(["",Validators.required]),
-      PaidBy: new FormControl(["",Validators.required]),
-      remenew: new FormControl(["",Validators.required])
+      registrationNumber: new FormControl("",[Validators.required]),
+      fullName: new FormControl( "",[Validators.required]),
+      course: new FormControl(""),
+      totalFess: new FormControl("",[Validators.required]),
+      discount: new FormControl(""),
+      paid: new FormControl(""),
+      paidBy: new FormControl(""),
+      remenew: new FormControl("")
     });
-    this.onSave()
-    {
-      console.log(this.feesDetailsForm.value);
-      return  this.feesDetailsForm.controls;
-    }
+    
+
   }
+  load()
+  {
+    console.log(this.feesDetailsForm.value);
+  }
+  
+  get f()
+  {
+    return this.feesDetailsForm.controls;
+  }
+
   
 }
 

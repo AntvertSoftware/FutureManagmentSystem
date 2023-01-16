@@ -1,52 +1,68 @@
 
 <div class="card">
-    <div class="card-header">
-      <h1>feesDetails</h1>
-    </div>
-    <br>
-    
-    <div>
-      <form class="row g-3" [formGroup]="feesDetailsForm" (ngSubmit)="onSave()">
-        <div class="col-md-6">
-          <label for="RegistrationNumber" class="form-label">RegistrationNumber<span style="color: rgb(151, 11, 11);">*</span></label>
-          <input type="number" class="form-control" id="RegistrationNumber" placeholder="100" formControlName="RegistrationNumber">
-          
-            
-          </div>
-        
-        <div class="col-md-6">
-          <label for="inputFullName" class="form-label">FullName<span style="color: rgb(151, 11, 11);">*</span></label>
-          <input type="text" class="form-control" id="inputFullName" placeholder="FullName" formControlName="FullName">
-         
+  <div style="font-size:20px  ; background-color: rgb(205, 205, 205); text-align: center;color: rgb(3, 3, 61);"
+    class="card-header">
+    FeeDetails
+
+  </div>
+
+
+  <div>
+    <form class="row g-3" [formGroup]="feesDetailsForm" (ngSubmit)="feesDetailsForms()">
+      <div class="col-md-6">
+        <label for="RegistrationNumber" class="form-label">RegistrationNumber<span
+            style="color: rgb(151, 11, 11);">*</span></label>
+        <input type="number" class="form-control" id="RegistrationNumber" placeholder="100"
+          formControlName="registrationNumber">
+        <div *ngIf="f['registrationNumber'].touched && f['registrationNumber'].invalid" class="alert alert-danger">
+          <div *ngIf="f['registrationNumber'].errors && f['registrationNumber'].errors['required']">RegistrationNumber
+            Required</div>
         </div>
-        <div class="col-md-4">
-            <label for="inputCource" class="form-label">Course</label>        
-            <select id="inputEnglish" class="form-select" formControlName="Course">          
-              <option selected>English</option>          
-              <option>Programing</option>
-            </select>
-            
-          </div>
-        
-        <div class="col-md-6">
-          <label for="TotalFess" class="form-label">TotalFess <span style="color: rgb(151, 11, 11);">*</span></label>
-          <input type="number" class="form-control" id="TotalFess" placeholder="TotalFess" formControlName="TotalFess">
-       
-        <div class="col-md-6">
-          <label for="Discount" class="form-label">Discount</label>
-          <input type="number" class="form-control" id="Discount" placeholder="Discount" formControlName="Discount">
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputFullName" class="form-label">FullName<span style="color: rgb(151, 11, 11);">*</span></label>
+        <input type="text" class="form-control" id="inputFullName" placeholder="FullName" formControlName="fullName">
+        <div *ngIf="f['fullName'].touched && f['fullName'].invalid" class="alert alert-danger">
+          <div *ngIf="f['fullName'].errors && f['fullName'].errors['required']">Full Name
+            Required</div>
         </div>
-        <div class="col-md-6">
-          <label for="Paid" class="form-label">Paid</label>
-          <input type="number" class="form-control" id="Paid" placeholder="Paid" formControlName="Paid">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCource" class="form-label">Course</label>
+        <select id="inputEnglish" class="form-select" formControlName="course">
+          <option selected>English</option>
+          <option>Programing</option>
+
+        </select>
+
+      </div>
+
+      <div class="col-md-6">
+        <label for="TotalFess" class="form-label">TotalFee <span style="color: rgb(151, 11, 11);">*</span></label>
+        <input type="number" class="form-control" id="TotalFess" placeholder="TotalFess" formControlName="totalFess">
+        <div *ngIf="f['totalFess'].touched && f['totalFess'].invalid" class="alert alert-danger">
+          <div *ngIf="f['totalFess'].errors && f['totalFess'].errors['required']">TotalFee
+            Required</div>
         </div>
-        <div class="col-md-4">
-          <label for="inputByAtm" class="form-label">PaidBy</label>
-          <select id="inputByCash" class="form-select" placeholder="PaidBy" formControlName="PaidBy">
-            <option selected>Atm</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="Remainew" class="form-label">Remainew</label>
-        </div>                    <input type="number" class="form-control" id="remenew" placeholder="remenew" formControlName="remenew>">
+      </div>
+      <div class="col-md-6">
+        <label for="Discount" class="form-label">Discount</label>
+        <input type="number" class="form-control" id="Discount" placeholder="Discount" formControlName="discount">
+      </div>
+      <div class="col-md-6">
+        <label for="Paid" class="form-label">Paid</label>
+        <input type="number" class="form-control" id="Paid" placeholder="Paid" formControlName="paid">
+      </div>
+      <div class="col-md-6">
+        <label for="inputByAtm" class="form-label">PaidBy</label>
+        <select id="inputByCash" class="form-select" placeholder="PaidBy" formControlName="paidBy">
+          <option selected>Atm</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputRemainew" class="form-label">Remainew</label>
+        <input type="inputnumber" class="form-control" id="remenew" placeholder="remenew" formControlName="remenew>">
+      </div>
+    </form>

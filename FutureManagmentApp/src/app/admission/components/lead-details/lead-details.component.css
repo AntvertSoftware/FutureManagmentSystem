@@ -2,17 +2,17 @@
 
 #customers td,
 #customers th {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(222, 190, 190);
     padding: 7px;
     
 }
 
 #customers tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f7f7;
 }
 
 #customers tr:hover {
-    background-color: #ddd;
+    background-color: rgb(204, 200, 200);
 }
 
 #customers th {
@@ -24,10 +24,11 @@
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-    width: 90%;
-margin-left: 5%;
+    margin-top: 62px;
+    margin-bottom: 50px;
+    margin-right: 80px;
+    margin-left: 60px;
+    border: 2px solid rgb(156, 158, 159);
 
 
 
