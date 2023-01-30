@@ -1,25 +1,18 @@
-/* .card-header {
-    background-color: rgb(232, 234, 233);
-} */
 
-/* .card-body {
-    background-color: rgb(241, 249, 245);
-} */
 
 
 .card {
-    /* background-color: rgb(227, 214, 240); */
+   
     justify-content: space-between;
     flex-wrap: wrap;
 
-    /* for border color */
-    border: 5px solid rgba(90, 168, 246, 0.453);
+    border: 3px solid rgba(199, 194, 194);
 
-    /* for height and width */
+    
     height: auto;
     width: 700px;
 
-    /* for center */
+    
     margin-top: 100px;
     margin-left: 30%;
     padding: 10px;
@@ -27,17 +20,10 @@
 }
 
 .save {
-    color: solid rgb(235, 232, 232);
-    border: 2px solid #4c9baf;
+    
     float: right;
     width: 100px;
     height: 50px;
     margin: 10px;
 }
 
-/* .cent{
-    margin: auto;
-    width: 44.7%;
-    border: 3px solid rgb(218, 15, 15);
-    padding: 2px;
-} */

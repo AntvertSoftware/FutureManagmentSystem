@@ -1,8 +1,12 @@
 
 .cent{
     margin: auto;
+    margin-top: 6%;
+   
     width: 20pc;
-    border: .2pc solid red;
+    
+    border: .2pc solid rgb(195, 190, 190);
+    
     padding: 2pc;
  
 }
